@@ -1,0 +1,11 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'main_page' %}">TODO LIST project</a>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'ToDoList:task-list' %}">All tasks</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'ToDoList:task-create' %}">Create task</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>

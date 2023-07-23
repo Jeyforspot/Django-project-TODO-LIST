@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 class="text-center">Available tasks:</h1>
+    {% if object_list %}
+        {% for instance in object_list %}
+            <div class="container alert alert-warning mt-2">
+                <h3>{{ instance.title }}</h3>
+                <p>{{ instance.description }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h2 class="text-center">Empty. Please, create <a href="{% url 'ToDoList:task-create' %}">a new task</a></h2>
+    {% endif %}
+<h1>{{f}}</h1>
+{% endblock %}
